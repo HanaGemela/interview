@@ -1,0 +1,14 @@
+Edge cases (For each action on multiselect - move, delete)
+1) Run the action when no items selected
+2) Run the action when all (multiple files as well as multiple folders - the exact number to be agreed on with BA) selected
+3) Run the action when an item included in the selection has been moved (e.g. it is an item inside a shared folder and other user has moved it)
+4) Run the action when an item included in the selection has been deleted (e.g. it is a shared item and it has been deleted by other user)
+5) Move files into a location where files with the same names already exist
+
+Tests to be automated:
+Regression testing is run frequently, against each release multiple times as the application support multiple browsers. This makes the regression tests a good candidate for automation.
+Another question is what tests should be picked for regression pack. Re-running the entire test suite might become very expensive over time as the number of tests grows.
+We can prioritize the tests based on business impact and frequency of usage. Keeping this in mind we might decide to automate the below tests:
+1) User can delete multiple files at once
+2) User can move multiple files at once
+
